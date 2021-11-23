@@ -9,12 +9,5 @@ def index(request):
     return render(request,'about.html',context)
 
 def products(request):
-    context = {
-        'title': 'GeekShop Store',
-        'products': [
-            {'name': 'Худи черного цвета с монограммами adidas Originals'},
-            {'name': 'Синяя куртка The North Face'},
-            {'name': 'Коричневый спортивный oversized-топ ASOS DESIGN'},
-        ]
-    }
-    return render(request,'shop.html',context)
+
+    return render(request,'shop.html')

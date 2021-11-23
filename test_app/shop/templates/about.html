@@ -71,7 +71,7 @@
 				<!-- section start-->
 				<section class="hero-block">
 					<picture>
-						<source srcset="img/about_bg.jpg" media="(min-width: 992px)"/><img class="img--bg" src="img/about_bg.jpg" alt="img"/>
+						<source srcset="static/img/about_bg.jpg" media="(min-width: 992px)"/><img class="img--bg" src="static/img/about_bg.jpg" alt="img"/>
 					</picture>
 					<div class="hero-block__layout"></div>
 					<div class="container">
@@ -107,20 +107,9 @@
 									<div class="team-item__description">
 										<h6 class="team-item__name">{{i.name_product}}</h6><span class="team-item__position">{{i.name_setting}}</span>
 										{{i.price}}
-										<ul class="socials socials--lblue list--reset">
-											<li class="socials__item"><a class="socials__link" href="#">
-												<svg class="icon">
-													<use xlink:href="#facebook"></use>
-												</svg></a></li>
-											<li class="socials__item"><a class="socials__link" href="#">
-												<svg class="icon">
-													<use xlink:href="#twitter"></use>
-												</svg></a></li>
-											<li class="socials__item"><a class="socials__link" href="#">
-												<svg class="icon">
-													<use xlink:href="#linkedin"></use>
-												</svg></a></li>
-										</ul>
+										<button>
+											<a class="button" href="{% url 'shop:products' %}"><span>Добавить</span></a>
+										</button>
 									</div>
 
 								</div>
