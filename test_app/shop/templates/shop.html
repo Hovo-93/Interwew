@@ -9,8 +9,15 @@
 
 </head>
 <body>
-    <p><span class="color--green">Название</span> <br> {{products.name_product}}</p>
-    <p><span class="color--green">Цена</span>{{products.price}}</p>
+
+
+<!--    <p><span class="color&#45;&#45;green">Категория <br></span>{{products.category1.name}}</p>-->
+    {%for p in products%}
+        <p><span class="color--green">Название</span> <br> {{p.name_product}}</p>
+        <p><span class="color--green">Цена</span>{{p.price}}</p>
+        <p><span class="color--green">Категория <br></span>{{p.category.name}}</p>
+
+    {%endfor%}
 
 </body>
 </html>
