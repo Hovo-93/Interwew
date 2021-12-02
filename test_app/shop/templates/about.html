@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="section team pb-0">
+					<div class="team__bg"></div>
+					<div class="container">
+						<div class="row align-items-center offset-50">
+							<div class="col-xl-6 bottom-70">
+								<div class="heading"><span class="heading__pre-title"></span>
+									<div class="list-group">
+										<h1 class="my-4">shop</h1>
+										{% for category in categories %}
+										<a href="{% url 'shop:products' category.id %}"
+										   class="list-group-item">{{ category.name }}</a>
+										{% endfor %}
+										<!--                <a href="#" class="list-group-item">Одежда</a>-->
+										<!--                <a href="#" class="list-group-item">Обувь</a>-->
+										<!--                <a href="#" class="list-group-item">Аксессуары</a>-->
+										<!--                <a href="#" class="list-group-item">Подарки</a>-->
+									</div>
+									<h3 class="heading__title">Lorem ipsum</h3>
+									<p class="heading__text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке,</p>
+								</div>
+							</div>
+							{%for p in product%}
+							<div class="col-sm-6 col-lg-4 col-xl-3">
+
+								<div class="team-item">
+
+									<div class="team-item__img"></div>
+									<div class="team-item__description">
+										<h6 class="team-item__name">{{p.name_product}}</h6><span class="team-item__position">{{p.name_setting}}</span>
+										{{p.price}}
+										<button>
+											<a class="button" href="{% url 'shop:products_edit' p.pk %}"><span>Добавить</span></a>
+										</button>
+									</div>
+
+								</div>
+							</div>
+							{%endfor%}
+
+						</div>
+					</div>
+				</section>
+{% endblock %}
