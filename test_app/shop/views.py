@@ -5,7 +5,7 @@ from .models import Product, ProductCategory
 # Create your views here.
 def index(request):
     context = {
-        'product': Product.objects.all(),
+        'product': Product.on_site.all(),
         'categories': ProductCategory.objects.all()
     }
     return render(request, 'about.html', context)
@@ -24,6 +24,7 @@ def products(request, category_id=None):
 def products_edit(request, pk):
     product = get_object_or_404(Product, pk=pk)
     context = {
-        'products': product
+        'products': product,
+        'site': request.site,
     }
     return render(request, 'cart.html', context)

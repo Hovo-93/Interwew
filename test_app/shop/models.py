@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.contrib.sites.models import Site
+from django.contrib.sites.managers import CurrentSiteManager
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=64, unique=True)
@@ -18,6 +19,8 @@ class Product(models.Model):
     created_timestamp = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     category1 = models.ManyToManyField(ProductCategory, related_name='category1')
-
+    site = models.ForeignKey(Site,on_delete=models.CASCADE,null=True)
+    objects = models.Manager()
+    on_site = CurrentSiteManager('site')
     def __str__(self):
         return f'{self.name_product}| {self.category.name}'
