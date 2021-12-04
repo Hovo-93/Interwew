@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Товари</title>
+
+</head>
+<body>
+
+
+<!--    <p><span class="color&#45;&#45;green">Категория <br></span>{{products.category1.name}}</p>-->
+    {%for p in products%}
+        <p><span class="color--green">Название</span> <br> {{p.name_product}}</p>
+        <p><span class="color--green">Цена</span>{{p.price}}</p>
+        <p><span class="color--green">Категория <br></span>{{p.category.name}}</p>
+
+    {%endfor%}
+
+</body>
+</html>
+
+
+
