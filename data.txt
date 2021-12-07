@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p><span class="color--green">Название</span> <br> Кеды</p>
+    <p><span class="color--green">Цена</span>222.00</p>
+    <p><span class="color--green">Категория <br></span>Обувь</p>
+    
+        <p><span class="color--green">Категория1 <br></span>Новики</p>
+    
+    <p><span class="color--green">Название site </span> <br> example.com</p>
+</body>
+</html>
